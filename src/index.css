@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+
+@layer utilities{
+    .animate-in {
+        animation-fill-mode: both;
+    }
+    .slide-in-from-top{
+       animation: slideInFromTop; 
+    }
+
+    .slide-in-from-bottom{
+       animation: slideInFromBottom; 
+    }
+
+    .duration-300 {
+        animation-duration:300ms;
+    }
+
+    .duration-700 {
+        animation-delay:100ms;
+    }
+
+    .delay-100 {
+        animation-duration:100ms;
+    }
+
+    .delay-200 {
+        animation-duration:200ms;
+    }
+
+    .delay-300 {
+        animation-duration:300ms;
+    }
+}
+
+@keyframes slideInfromTop {
+    from {
+        opacity: 0;
+        transform:translateY(-1rem);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}
+
+@keyframes slideInfromBottom {
+    from {
+        opacity: 0;
+        transform:translateY(1rem);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}
